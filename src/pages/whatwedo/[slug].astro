@@ -1,0 +1,37 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import SwiperComp from "@components/react-comps/swiper";
+import Heading from "@components/Heading.astro";
+export async function getStaticPaths() {
+  const wwds = await getCollection("whatwedo");
+  return wwds.map((wwd) => {
+    return {
+      params: {
+        slug: wwd.slug,
+      },
+      props: {
+        wwd,
+      },
+    };
+  });
+}
+interface Props {
+  wwd: CollectionEntry<"whatwedo">;
+}
+const { wwd } = Astro.props;
+const { Content } = await wwd.render();
+---
+
+<Layout
+  title="What We do  | Atma Seva - Support Marginalised, Women, Children and Elderly"
+  description="Providing support, in Health care, Welfare and Education for Vulnerable, Marginalised, Women, Children and the Elderly in Uttarakhand, India."
+>
+  <main class="max-w-4xl mx-auto my-20">
+    <Heading class="text-center mb-5">{wwd.data.title}</Heading>
+    <Content />
+    <div class="my-5">
+      <SwiperComp images={wwd.data.set} client:load />
+    </div>
+  </main>
+</Layout>

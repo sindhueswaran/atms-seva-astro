@@ -1,0 +1,29 @@
+---
+import Heading from "@components/Heading.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+const wwds = await getCollection("whatwedo", ({ data }) => {
+  return data.draft !== true;
+});
+---
+
+<Layout
+  title="What We do | Atma Seva - Support Marginalised, Women, Children and Elderly"
+  description="Providing support, in Health care, Welfare and Education for Vulnerable, Marginalised, Women, Children and the Elderly in Uttarakhand, India."
+>
+  <main class="max-w-5xl mx-auto my-20">
+    <Heading class="text-center mb-5">What We do</Heading>
+    <ul class="grid md:grid-cols-2 gap-8">
+      {
+        wwds.map((wwd) => (
+          <li class="bg-slate-50 border-2 rounded-lg hover:shadow-md">
+            <a href={`/whatwedo/${wwd.slug}`}>
+              <img src={wwd.data.img} class="rounded-t-lg" alt="" />
+              <Heading class="text-center my-2"> {wwd.data.title} </Heading>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>

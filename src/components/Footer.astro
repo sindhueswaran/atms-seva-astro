@@ -1,0 +1,25 @@
+---
+const navigation = [
+  { weight: 1, name: "Covid-19", href: "/covid" },
+  { weight: 2, name: "About", href: "/about" },
+  { weight: 3, name: "What We Do", href: "/whatwedo" },
+  { weight: 4, name: "Gallery", href: "/gallery" },
+  { weight: 5, name: "Contact", href: "/contact" },
+  { weight: 6, name: "Support", href: "/support" },
+];
+---
+
+<footer class="bg-gray-500 text-gray-200 text-center py-12">
+  <p class="mb-5">Property of Atma Seva</p>
+  <ul class="flex justify-center">
+    {
+      navigation.map((item) => (
+        <li>
+          <a class="hover:text-gray-400 mx-3" href={item.href}>
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</footer>

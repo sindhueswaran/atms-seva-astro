@@ -1,0 +1,46 @@
+---
+import Layout from "@layouts/Layout.astro";
+import GallerySlider from "@components/react-comps/gallerySlider";
+import Heading from "@components/Heading.astro";
+const images = [
+  "../src/images/gallery/1.jpg",
+  "../src/images/gallery/10.jpg",
+  "../src/images/gallery/11.jpg",
+  "../src/images/gallery/12.jpg",
+  "../src/images/gallery/13.jpg",
+  "../src/images/gallery/14.jpg",
+  "../src/images/gallery/15.jpg",
+  "../src/images/gallery/16.jpg",
+  "../src/images/gallery/17.jpg",
+  "../src/images/gallery/18.jpg",
+  "../src/images/gallery/19.jpg",
+  "../src/images/gallery/20.jpg",
+  "../src/images/gallery/21.jpg",
+  "../src/images/gallery/22.jpg",
+  "../src/images/gallery/23.jpg",
+  "../src/images/gallery/24.jpg",
+  "../src/images/gallery/25.jpg",
+  "../src/images/gallery/26.jpg",
+  "../src/images/gallery/27.jpg",
+  "../src/images/gallery/28.jpg",
+  "../src/images/gallery/29.jpg",
+  "../src/images/gallery/4.jpg",
+  "../src/images/gallery/6.jpg",
+  "../src/images/gallery/6-1.jpg",
+  "../src/images/gallery/7.jpg",
+  "../src/images/gallery/8.jpg",
+  "../src/images/gallery/9.jpg",
+  "../src/images/gallery/ascollage.jpg",
+  "../src/images/gallery/collage.jpg",
+];
+---
+
+<Layout
+  title="Gallery | Atma Seva - Support Marginalised, Women, Children and Elderly"
+  description="Providing support, in Health care, Welfare and Education for Vulnerable, Marginalised, Women, Children and the Elderly in Uttarakhand, India."
+>
+  <main class="my-20 mx-auto">
+    <Heading class="text-center mb-14">Gallery</Heading>
+    <GallerySlider galleryImages={images} client:load />
+  </main>
+</Layout>

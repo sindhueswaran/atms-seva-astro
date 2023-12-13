@@ -1,0 +1,54 @@
+---
+import Heading from "@components/Heading.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout
+  title="Contact | Atma Seva - Support Marginalised, Women, Children and Elderly"
+  description="Providing support, in Health care, Welfare and Education for Vulnerable, Marginalised, Women, Children and the Elderly in Uttarakhand, India."
+>
+  <main class="my-20">
+    <div class="text-center mb-5">
+      <Heading class="text-center mb-5">Email</Heading>
+      <a
+        class="mb-10 text-lg font-semibold hover:text-stone-700"
+        title="Send email to atmaseva108@gmail.com"
+        href="mailto:atmaseva108@gmail.com"
+        target="_top"
+      >
+        atmaseva108@gmail.com
+      </a>
+    </div>
+    <Heading class="text-center mb-5">Follow us on...</Heading>
+
+    <div class="social-icons flex justify-center mb-36">
+      <a
+        class="social-btn mx-3"
+        href="https://www.facebook.com/AtmaSeva108/"
+        title="Facebook link"
+      >
+        <img
+          class="bio-avatar transition delay-150 duration-300 ease-in-out hover:opacity-75"
+          src="../src/images/facebook.svg"
+          width={75}
+          height={75}
+          alt="Facebook link"
+        />
+      </a>
+
+      <a
+        class="social-btn mx-3"
+        href="https://www.instagram.com/atma.tattwa/"
+        title="Instagram link"
+      >
+        <img
+          class="bio-avatar transition delay-150 duration-300 ease-in-out hover:opacity-75"
+          src="../src/images/instagram.svg"
+          width={75}
+          height={75}
+          alt="Instagram Link"
+        />
+      </a>
+    </div>
+  </main>
+</Layout>

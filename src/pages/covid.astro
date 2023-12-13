@@ -1,0 +1,86 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SwiperComp from "@components/react-comps/swiper.jsx";
+const images = [
+  "../src/images/covid/1.jpg",
+  "../src/images/covid/10.jpg",
+  "../src/images/covid/11.jpg",
+  "../src/images/covid/12.jpg",
+  "../src/images/covid/13.jpg",
+  "../src/images/covid/14.jpg",
+  "../src/images/covid/15.jpg",
+  "../src/images/covid/16.jpg",
+  "../src/images/covid/17.jpg",
+  "../src/images/covid/18.jpg",
+  "../src/images/covid/19.jpg",
+  "../src/images/covid/2.jpg",
+  "../src/images/covid/20.jpg",
+  "../src/images/covid/21.jpg",
+  "../src/images/covid/22.jpg",
+  "../src/images/covid/23.jpg",
+  "../src/images/covid/24.jpg",
+  "../src/images/covid/25.jpg",
+  "../src/images/covid/26.jpg",
+  "../src/images/covid/27.jpg",
+  "../src/images/covid/28.jpg",
+  "../src/images/covid/29.jpg",
+  "../src/images/covid/3.jpg",
+  "../src/images/covid/30.jpg",
+  "../src/images/covid/31.jpg",
+  "../src/images/covid/32.jpg",
+  "../src/images/covid/33.jpg",
+  "../src/images/covid/34.jpg",
+  "../src/images/covid/35.jpg",
+  "../src/images/covid/36.jpg",
+  "../src/images/covid/37.jpg",
+  "../src/images/covid/38.jpg",
+  "../src/images/covid/39.jpg",
+  "../src/images/covid/4.jpg",
+  "../src/images/covid/40.jpg",
+  "../src/images/covid/41.jpg",
+  "../src/images/covid/42.jpg",
+  "../src/images/covid/43.jpg",
+  "../src/images/covid/5-2.jpg",
+  "../src/images/covid/5.jpg",
+  "../src/images/covid/6.jpg",
+  "../src/images/covid/7-2.jpg",
+  "../src/images/covid/7.jpg",
+  "../src/images/covid/8.jpg",
+  "../src/images/covid/9.jpg",
+];
+---
+
+<Layout
+  title="Covid | Atma Seva - Support  Marginalised, Women, Children and Elderly"
+  description="Providing support, in Health care, Welfare and Education for Vulnerable, Marginalised, Women, Children and the Elderly in Uttarakhand, India."
+>
+  <main class="max-w-4xl mx-auto my-20">
+    <div class="max-w-6xl mx-auto">
+      <SwiperComp images={images} client:load />
+    </div>
+
+    <div class="mx-auto mt-5">
+      <p>
+        Since the start of the Covid-19 pandemic and during lockdowns Atma Seva
+        has focused on Rations Relief for below poverty level families, now
+        jobless, daily wage earners with no backup or support to feed their
+        hungry families.
+        <br /><br />
+         The situation is dire. Many are itinerant labourers not beggars but
+        proud working men and women. Through extraordinary Grace from the Divine
+        Powers that be, support has flowed in from yogis, friends, family and
+        openhearted kindness and trust of previously unknown souls from
+        Australia, Belgium, Canada, China, Denmark, Germany, Hawaii, Hungary,
+        India, Ireland, Lebanon, Netherlands and UK which has made it possible,
+        for nearly 900 families in slums and villages in 14 locations in 6
+        states.
+        <br /><br />
+         Family Ration ‘kits’ with 14 items cost 1200 rupees each (USD 16, EUR
+        13.5, GBP 11.6, AUD 21 & CAD 19.8 at the time of writing). They last for
+        18 to 21 days. We continue to do what we can with what we receive. With
+        zero administration costs every cent and penny goes directly to our
+        beneficiaries.
+      </p>
+    </div>
+  </main>
+</Layout>

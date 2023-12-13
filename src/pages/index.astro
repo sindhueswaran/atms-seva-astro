@@ -1,0 +1,54 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SwiperComp from "@components/react-comps/swiper.jsx";
+import Heading from "@components/Heading.astro";
+const images = [
+  "../src/images/front/1.jpg",
+  "../src/images/front/10.jpg",
+  "../src/images/front/6-1.jpg",
+  "../src/images/front/11.jpg",
+  "../src/images/front/12.jpg",
+  "../src/images/front/13.jpg",
+  "../src/images/front/14.jpg",
+  "../src/images/front/15.jpg",
+  "../src/images/front/16.jpg",
+  "../src/images/front/17.jpg",
+  "../src/images/front/18.jpg",
+  "../src/images/front/19.jpg",
+  "../src/images/front/20.jpg",
+  "../src/images/front/21.jpg",
+  "../src/images/front/22.jpg",
+  "../src/images/front/23.jpg",
+  "../src/images/front/24.jpg",
+  "../src/images/front/25.jpg",
+  "../src/images/front/26.jpg",
+  "../src/images/front/27.jpg",
+  "../src/images/front/28.jpg",
+  "../src/images/front/29.jpg",
+  "../src/images/front/4.jpg",
+  "../src/images/front/6.jpg",
+  "../src/images/front/7.jpg",
+  "../src/images/front/8.jpg",
+  "../src/images/front/9.jpg",
+  "../src/images/front/ascollage.jpg",
+  "../src/images/front/collage.jpg",
+];
+---
+
+<Layout
+  title="Home | Atma Seva - Support Marginalised, Women, Children and Elderly"
+  description="Providing support, in Health care, Welfare and Education for Vulnerable, Marginalised, Women, Children and the Elderly in Uttarakhand, India."
+>
+  <main class="my-20">
+    <div class="max-w-6xl mx-auto">
+      <SwiperComp images={images} client:load />
+    </div>
+
+    <div class="block mx-auto py-5 max-w-4xl">
+      <Heading class="text-center text-orange-600">
+        Providing support, in Health care, Welfare and Education for Vulnerable,
+        Marginalised, Women, Children and the Elderly in Uttarakhand, India.
+      </Heading>
+    </div>
+  </main>
+</Layout>

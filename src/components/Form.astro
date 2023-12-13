@@ -1,0 +1,57 @@
+---
+import Button from "./Button.astro";
+import Heading from "./Heading.astro";
+---
+
+<Heading class="text-center">Do get in touch</Heading>
+<div class="flex justify-center">
+  <form
+    class="d-grid"
+    name="contact"
+    method="POST"
+    action="/thankyou"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+    <input name="bot-field" type="hidden" name="form-name" value="contact" />
+
+    <div class="mt-8 max-w-lg">
+      <div class="grid grid-cols-2 gap-6 mb-5">
+        <label class="block" for="name">
+          <span class="text-gray-700">Your Name</span>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          />
+        </label>
+        <label class="block" for="email">
+          <span class="text-gray-700">Email address</span>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          />
+        </label>
+      </div>
+      <label class="block" for="message">
+        <span class="text-gray-700">Your Message</span>
+        <textarea
+          id="message"
+          name="message"
+          rows="3"
+          placeholder="Your Message"
+          required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+        ></textarea>
+      </label>
+    </div>
+    <Button type="submit">Submit</Button>
+  </form>
+</div>
